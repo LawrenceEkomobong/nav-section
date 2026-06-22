@@ -25,7 +25,7 @@ function Dropdown() {
         <div ref={dropdownRef}>
             <div>
                 <img
-                    src="./images/icon-menu.svg"
+                    src="images\icon-menu.svg"
                     alt="Menu" id="menu-icon"
                     onClick={() => setIsOpen(!isOpen)}
                 />
@@ -40,7 +40,7 @@ function Dropdown() {
                     <div className="dropdown">
                        <div className="close-btn">
                            <img
-                            src="./images/icon-close-menu.svg"
+                            src="images\icon-close-menu.svg"
                             alt="Close"
                             onClick={() => setIsOpen(false)}
                             />
@@ -48,26 +48,26 @@ function Dropdown() {
                      <div className="drop1">
                         <a href="#" id="links">features</a>
                         <img
-                            src="./images/icon-arrow-down.svg"
+                            src="images\icon-arrow-down.svg"
                             alt="arrow" id="arrow1"
                             onClick={() => setFeaturesOpen(!featuresOpen)}
                         />
                         {featuresOpen && (
                             <div className="drop1-content">
                                 <div className="flex1" id="flex">
-                                    <img src="./images/icon-todo.svg" alt="todo" />
+                                    <img src="images\icon-todo.svg" alt="todo" />
                                     <a href="#">Todo List</a>
                                 </div>
                                 <div className="flex2" id="flex">
-                                    <img src="./images/icon-calendar.svg" alt="calendar" />
+                                    <img src="images\icon-calendar.svg" alt="calendar" />
                                     <a href="#">Calendar</a>
                                 </div>
                                 <div className="flex3" id="flex">
-                                    <img src="./images/icon-reminders.svg" alt="reminders" />
+                                    <img src="images\icon-reminders.svg" alt="reminders" />
                                     <a href="#">Reminders</a>
                                 </div>
                                 <div className="flex4" id="flex">
-                                    <img src="./images/icon-planning.svg" alt="planning" />
+                                    <img src="images\icon-planning.svg" alt="planning" />
                                     <a href="#">Planning</a>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ function Dropdown() {
                       <div className="drop2">
                          <a href="#" id="links">Company</a>
                          <img
-                            src="./images/icon-arrow-down.svg"
+                            src="images\icon-arrow-down.svg"
                             alt="arrow" id="arrow2"
                             onClick={() => setCompanyOpen(!companyOpen)}
                          />
