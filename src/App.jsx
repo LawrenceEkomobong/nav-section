@@ -4,6 +4,18 @@ import { useState, useEffect, useRef } from 'react'
 // import heroImg from './assets/hero.png'
 import './App.css'
 import Dropdown from './dropdown.jsx'
+import logo from '../images/logo.svg';
+import iconArrowDown from '../images/icon-arrow-down.svg';
+import iconTodo from '../images/icon-todo.svg';
+import iconCalendar from '../images/icon-calendar.svg';
+import iconReminders from '../images/icon-reminders.svg';
+import iconPlanning from '../images/icon-planning.svg';
+import heroMobile from '../images/image-hero-mobile.png';
+import heroDesktop from '../images/image-hero-desktop.png';
+import clientDatabiz from '../images/client-databiz.svg';
+import clientAudiophile from '../images/client-audiophile.svg';
+import clientMeet from '../images/client-meet.svg';
+import clientMaker from '../images/client-maker.svg';
 
 function App() {
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -27,13 +39,13 @@ function App() {
   return (
     <>
     <nav className='nav' ref={navRef}>
-      <img src="images/logo.svg" alt="Logo" />
+      <img src={logo} alt="Logo" />
       <div className="desktop-nav">
     <div className="nav-left">
       <div className="drop1">
       <a href="#">Features</a>
   <img
-  src="images/icon-arrow-down.svg"
+  src={iconArrowDown}
   alt="arrow" id="arrow1"
   onClick={() => {
     setCompanyOpen(false);
@@ -43,19 +55,19 @@ function App() {
 {featuresOpen && (
   <div className="first-content">
       <div className="flex1" id="flex">
-          <img src="images/icon-todo.svg" alt="todo" />
+          <img src={iconTodo} alt="todo" />
           <a href="#">Todo List</a>
       </div>
       <div className="flex2" id="flex">
-          <img src="images/icon-calendar.svg" alt="calendar" />
+          <img src={iconCalendar} alt="calendar" />
           <a href="#">Calendar</a>
       </div>
       <div className="flex3" id="flex">
-          <img src="images/icon-reminders.svg" alt="reminders" />
+          <img src={iconReminders} alt="reminders" />
           <a href="#">Reminders</a>
       </div>
       <div className="flex4" id="flex">
-          <img src="images/icon-planning.svg" alt="planning" />
+          <img src={iconPlanning} alt="planning" />
           <a href="#">Planning</a>
       </div>
   </div>
@@ -64,7 +76,7 @@ function App() {
 <div className="drop2">
 <a href="#">Company</a>
 <img
-    src="images/icon-arrow-down.svg"
+    src={iconArrowDown}
     alt="arrow" id="arrow2"
     onClick={() => {
       setFeaturesOpen(false);
@@ -91,10 +103,10 @@ function App() {
       <Dropdown />
     </nav>
     <div className="hero">
-      <div className="hero-image">
+        <div className="hero-image">
         <img
-      src="images/image-hero-mobile.png"
-      srcSet="images/image-hero-mobile.png 600w, images/image-hero-desktop.png 1200w"
+      src={heroMobile}
+      srcSet={`${heroMobile} 600w, ${heroDesktop} 1200w`}
       sizes="(min-width: 1024px) 550px, 100vw"
       alt="Hero"
       />
@@ -106,10 +118,10 @@ function App() {
         <button className='button'>Learn more</button>
         </div>
         <div className="client-logos">
-          <img src="images/client-databiz.svg" alt="Databiz" />
-          <img src="images/client-audiophile.svg" alt="Audiophile" />
-          <img src="images/client-meet.svg" alt="Meet" />
-          <img src="images/client-maker.svg" alt="Maker" />
+          <img src={clientDatabiz} alt="Databiz" />
+          <img src={clientAudiophile} alt="Audiophile" />
+          <img src={clientMeet} alt="Meet" />
+          <img src={clientMaker} alt="Maker" />
         </div>
       </div>
     </div>
